@@ -1,0 +1,39 @@
+*{
+    margin:0;
+}
+
+.BadgesList__container{
+    max-width: 800px;
+    padding: 10px;
+}
+.BadgesList__wrapper{
+    width: 100%;
+    margin:0;
+}
+
+.BadgesList__Item{
+width: 600px;
+display: inline-block;
+margin: 5px;
+margin-bottom: 15px;
+background-color: white;
+list-style-type: none;
+border-radius: 5px;
+display: flex;
+}
+
+.BadgesList__container-img{
+    margin: 5px 12px;
+}
+
+.BadgesList__img {
+    border-radius: 50%;
+}
+
+.BadgesList__info p{
+    margin: 5px;
+}
+
+.twitter{
+    color: #0069D9;
+}

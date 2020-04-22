@@ -1,6 +1,6 @@
 .Navbar{
-    background-color: lightseagreen;
-    padding: 0px  12px;
+    background-color: #0069D9;
+    padding: 0px  25px;
 }
 
 .Navbar span {
@@ -10,4 +10,9 @@
 
 .Navbar a{
     text-decoration: none;
+}
+
+.Navbar__logo{
+    height: 90px;
+    width: 90px;
 }

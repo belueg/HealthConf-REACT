@@ -1,0 +1,17 @@
+.BadgeForm__container{
+    margin: 10px;
+}
+
+.BadgeForm__title{
+    font-size: 1.8em;
+}
+
+.BadgeForm__input{
+    margin-bottom: 0;
+}
+
+.BadgeForm__btn{
+
+    margin-top: 10px;
+    
+}

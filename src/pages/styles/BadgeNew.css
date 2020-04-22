@@ -1,7 +1,6 @@
-.BadgeNew__hero {
-    background-color:#F1F0F5 ;
-    height: 25vh;
-    padding: 0 30px;
-    display: flex;
-    align-items: center;
+
+
+.BadgeNew__container{
+    background-color: #F1F0F5;
+    height: calc(100vh);
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import "./styles/Badge.css";
-import confLogo from '../images/logo2.png';
+import confLogo from '../images/undraw_medicine_b1ol.svg';
 
 class Badge extends React.Component {
 
@@ -9,7 +9,7 @@ class Badge extends React.Component {
             <div className="Badge">
 
                 <div className="Badge__header">
-                    <img src={confLogo} alt="logo" />
+                    <img src={confLogo} alt="logo" className="Badge__logo" />
                 </div>
 
                 <div className="Badge__section-name">
@@ -20,14 +20,14 @@ class Badge extends React.Component {
                 </div>
 
                 <div className="Badge__section-info">
-                    <h3>{this.props.jobName}</h3>
+                    <h3>{this.props.jobTitle}</h3>
                     <span>@{this.props.twitter}</span>
 
                 </div>
 
                 <div className="Badge__footer">
 
-                    <div> #Saludconf </div>
+                    <div> #HealthConf </div>
                 </div>
 
             </div>

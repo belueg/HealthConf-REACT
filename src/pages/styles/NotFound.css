@@ -1,0 +1,22 @@
+.NotFound__container{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.NotFound__img{
+    width: 100%; 
+}
+
+.NotFound__title{
+    display: inline-block;
+}
+
+.NotFound__img-container{
+    display: inline-block;
+    width: 478px;
+    margin:0;
+}
