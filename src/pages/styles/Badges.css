@@ -6,11 +6,16 @@
     padding-top: 20px;
 width: 100%;
 height: 100%;
-background-color: #F1F0F5;
+background-color: white;
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
 align-items: center;
+}
+
+.Badges__container-list{
+    background-color:  #F1F0F5;
+    ;
 }
 
 .Badges__list{

@@ -1,8 +1,8 @@
 import React from 'react';
-import Image from '../images/undraw_doctors_hwty.svg'
-import Logo from '../images/undraw_medicine_b1ol.svg'
-import './styles/Home.css'
-import { Link } from 'react-router-dom'
+import Image from '../images/undraw_doctors_hwty.svg';
+import Logo from '../images/undraw_medicine_b1ol.svg';
+import './styles/Home.css';
+import { Link } from 'react-router-dom';
 
 
 class Home extends React.Component {
