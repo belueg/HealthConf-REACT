@@ -10,33 +10,35 @@ class BadgeEdit extends React.Component {
     state = {
         loading: true,
         error: null,
+        data: undefined,
         form: {
+
             avatarUrl: "",
         },
 
     };
 
     componentDidMount() {
-        this.fetchData()
+
+        this.fetchInfo()
     }
 
-    fetchData = async (e) => {
+    fetchInfo = async () => {
         this.setState({ loading: true, error: null })
-
 
         try {
             const data = await api.badges.read(
-                this.props.match.params.badgeId
-            )
+                this.props.match.params.badgeId)
+
             this.setState({ loading: false, form: data })
 
         } catch (error) {
-
             this.setState({ loading: false, error: error })
         }
     }
 
     handleChange = e => {
+
         this.setState({
 
             form: {
@@ -57,7 +59,6 @@ class BadgeEdit extends React.Component {
 
         }
 
-
     }
 
     handleSubmit = async e => {
@@ -66,7 +67,8 @@ class BadgeEdit extends React.Component {
         this.setState({ loading: true, error: null })
 
         try {
-            await api.badges.update(this.props.match.params.badgeId, this.state.form)
+            await api.badges.update(this.state.form.id, this.state.form)
+            this.setState({ loading: false, error: null })
             this.props.history.push('/badges')
         } catch (error) {
             this.setState({ loading: false, error: error })
@@ -93,14 +95,14 @@ class BadgeEdit extends React.Component {
                                 lastName={this.state.form.lastName || 'Last_name'}
                                 twitter={this.state.form.twitter || 'twitter'}
                                 jobTitle={this.state.form.jobTitle || 'Job_title'}
-                                email={this.state.form.email || 'EMAIL'}
+                                email={this.state.form.email || 'email'}
                                 avatarUrl={this.state.form.avatarUrl || 'https://www.gravatar.com/avatar/5a91e01b09f18213bcbba7413056afd0?d=identicon'}
 
                             />
                         </div>
                         <div className="col-6">
                             <BadgeForm
-                                title={'Edit User'}
+                                title={'Edit Badge'}
                                 onChange={this.handleChange}
                                 formValues={this.state.form}
                                 onSubmit={this.handleSubmit}

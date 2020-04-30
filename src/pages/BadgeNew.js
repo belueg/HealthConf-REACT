@@ -36,7 +36,6 @@ class BadgeNew extends React.Component {
 
     }
 
-
   }
 
   handleSubmit = async e => {

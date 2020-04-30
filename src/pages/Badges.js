@@ -7,9 +7,6 @@ import PageLoading from '../components/PageLoading'
 import PageError from '../components/PageError'
 
 class Badges extends React.Component {
-    //Constructor
-
-
 
     state = {
         loading: true,
@@ -20,9 +17,16 @@ class Badges extends React.Component {
 
     componentDidMount() {
 
-        this.fetchData()
+        this.fetchData();
 
+        //Polling
+        this.fetchInterval = setInterval(this.fetchData, 5000);
     }
+    componentWillUnmount() {
+
+        clearInterval(this.fetchInterval)
+    }
+
 
     fetchData = async () => {
         this.setState({ loading: true, error: null })
@@ -42,7 +46,7 @@ class Badges extends React.Component {
 
     render() {
 
-        if (this.state.loading) {
+        if (this.state.loading && this.state.data === undefined) {
 
             return <PageLoading />
         }
@@ -68,8 +72,9 @@ class Badges extends React.Component {
                     <div className="Badges__list">
                         <div>
                             <BadgesList badges={this.state.data} />
-
                         </div>
+
+                        {this.state.loading && 'Loading...'}
                     </div>
 
                 </div>

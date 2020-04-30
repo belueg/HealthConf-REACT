@@ -2,11 +2,11 @@
   "badges": [
     {
       "id": "2de30c42-9deb-40fc-a41f-05e62b5939a7",
-      "firstName": "Freda",
+      "firstName": "Maria",
       "lastName": "Grady",
       "email": "Leann_Berge@gmail.com",
-      "jobTitle": "Legacy Brand Director",
-      "twitter": "FredaGrady22221-7573",
+      "jobTitle": "Lead",
+      "twitter": "MaryLead",
       "avatarUrl": "https://www.gravatar.com/avatar/f63a9c45aca0e7e7de0782a6b1dff40b?d=identicon"
     },
     {
@@ -21,11 +21,11 @@
     {
       "id": "63c03386-33a2-4512-9ac1-354ad7bec5e9",
       "firstName": "Maria",
-      "lastName": "Torphy",
+      "lastName": "",
       "email": "Ron61@hotmail.com",
       "jobTitle": "Student",
       "twitter": "dexterGatuno",
-      "avatarUrl": "https://www.gravatar.com/avatar/70355db08833094ebc38f40c5bcbee28?d=identicon"
+      "avatarUrl": "https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?d=identicon"
     },
     {
       "id": "a9748581-dfdc-4a78-930d-5205a2ccef48",
@@ -440,54 +440,6 @@
       "jobTitle": "Lawyer",
       "twitter": "ckaufmanpr",
       "id": "npaYZKI"
-    },
-    {
-      "firstName": "Belén",
-      "lastName": "González",
-      "avatarUrl": "https://www.gravatar.com/avatar/d1dc1aa164536e5b1e30f7b3c45bffab?d=identicon",
-      "jobTitle": "Student",
-      "twitter": "belueg",
-      "id": "kTW2yii"
-    },
-    {
-      "firstName": "Pau",
-      "lastName": "Joan",
-      "avatarUrl": "https://www.gravatar.com/avatar/ce000e6f2db98f2a0bf84d8a278f889b?d=identicon",
-      "jobTitle": "Student",
-      "twitter": "dexterGatuno",
-      "id": "N63yrYJ"
-    },
-    {
-      "firstName": "Zamira",
-      "lastName": "González",
-      "avatarUrl": "https://www.gravatar.com/avatar/d1dc1aa164536e5b1e30f7b3c45bffab?d=identicon",
-      "jobTitle": "Student",
-      "twitter": "zami123",
-      "id": "RiuVm9N"
-    },
-    {
-      "firstName": "Belén",
-      "lastName": "González",
-      "avatarUrl": "https://www.gravatar.com/avatar/d1dc1aa164536e5b1e30f7b3c45bffab?d=identicon",
-      "jobTitle": "Student",
-      "twitter": "asd",
-      "id": "3b-4Fps"
-    },
-    {
-      "avatarUrl": "https://www.gravatar.com/avatar/1c6529800fff039ca94b1629fcb99c92?d=identicon",
-      "firstName": "Juana",
-      "lastName": "Lopez",
-      "jobTitle": "Hunter",
-      "twitter": "asd",
-      "id": "K_EDBCw"
-    },
-    {
-      "avatarUrl": "",
-      "id": "WO8Kpkd"
-    },
-    {
-      "avatarUrl": "",
-      "id": "gBPjZxR"
     }
   ]
 }
