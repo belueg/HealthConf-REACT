@@ -13,7 +13,8 @@ class BadgesListItem extends Component {
                 <img src={this.props.badge.avatarUrl} alt="" />
 
 
-                <div className="BadgesList__info"> <p>   {this.props.badge.firstName} {this.props.badge.lastName} </p>
+                <div className="BadgesList__info">
+                    <p>   {this.props.badge.firstName} {this.props.badge.lastName} </p>
                     <p> <IoLogoTwitter className="twitter" /> {this.props.badge.twitter}</p>
                     <p>{this.props.badge.jobTitle}</p> </div>
             </div>

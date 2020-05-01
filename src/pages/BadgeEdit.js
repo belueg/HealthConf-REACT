@@ -13,7 +13,6 @@ class BadgeEdit extends React.Component {
         data: undefined,
         form: {
 
-            avatarUrl: "",
         },
 
     };
@@ -39,27 +38,32 @@ class BadgeEdit extends React.Component {
 
     handleChange = e => {
 
-        this.setState({
-
-            form: {
-
-                ...this.state.form,
-                [e.target.name]: e.target.value,
-
-            }
-        })
-
         if (e.target.name === "email") {
+            const avatarHash = hashGravatar(e.target.value)
             this.setState({
                 form: {
                     ...this.state.form,
-                    avatarUrl: hashGravatar(e.target.value)
+                    avatarUrl: avatarHash,
+                    [e.target.name]: e.target.value
                 }
+            })
+        }
+        else {
+            this.setState({
+
+                form: {
+
+                    ...this.state.form,
+                    [e.target.name]: e.target.value,
+
+                }
+
             })
 
         }
 
     }
+
 
     handleSubmit = async e => {
         e.preventDefault();
