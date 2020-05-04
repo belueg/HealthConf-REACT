@@ -3,5 +3,41 @@
 .BadgeNew__container{
     background-color: white;
     /* #F1F0F5; */
-    height: 100vh;
+    height: 100%;
+}
+
+.BadgeForm__title{
+    margin:0;
+    font-size:1.5em ;
+}
+
+.BadgeForm__form-container{
+    margin-top: 20px;
+}
+
+.BadgeForm__input label{
+    margin:0;
+}
+
+.BadgeDetails__items{
+    text-align: left;
+    padding: 20px;
+}
+
+
+@media screen and (max-width:767px){
+    .BadgeNew__container{
+        margin-bottom: 30px;
+
+    }
+    .BadgeNew__new-container{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .BadgeDetails__items{
+        text-align: center;
+        padding: 20px;
+    }
 }

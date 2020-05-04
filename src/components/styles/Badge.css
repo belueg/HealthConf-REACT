@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+
+
 .Badge{
    
     box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.397);
@@ -25,8 +28,11 @@ justify-content: center;
     height:140px ;
 }
 
+
 .Badge__section-name h1{
-    font-size: 36px;
+    font-size: 32px;
+    margin-left: 15px;
+
 }
 
 .Badge__avatar{
@@ -48,6 +54,7 @@ flex-direction: column;
 }
 
 .Badge__section-info h3 {
+    font-size: 20px;
     margin:0;
     margin-bottom: 5px;
 }

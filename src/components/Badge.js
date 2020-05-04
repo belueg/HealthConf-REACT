@@ -16,7 +16,7 @@ function Badge(props) {
 
             <div className="Badge__section-name">
                 <img src={props.avatarUrl} alt="Avatar" />
-                <h1> {props.firstName} <br />
+                <h1 > {props.firstName} <br />
                     {props.lastName}</h1>
 
             </div>

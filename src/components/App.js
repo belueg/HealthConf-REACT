@@ -1,12 +1,14 @@
 import React from 'react';
 import Badges from '../pages/Badges';
 import BadgeNew from '../pages/BadgeNew';
-import Home from '../pages/Home'
-import BadgeEdit from '../pages/BadgeEdit'
-import NotFound from '../pages/NotFound'
+import Home from '../pages/Home';
+import Footer from './Footer'
+import BadgeEdit from '../pages/BadgeEdit';
+import NotFound from '../pages/NotFound';
 import BadgeDetailsContainer from '../pages/BadgeDetailsContainer'
 import Layout from './Layout';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 
 function App() {
 
@@ -23,6 +25,7 @@ function App() {
 
                 </Switch>
             </Layout>
+            <Footer />
         </BrowserRouter>
     );
 }

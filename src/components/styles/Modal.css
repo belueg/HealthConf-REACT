@@ -14,7 +14,7 @@
 .TextBox{
 background-color: white;
 width: 300px;
-height: 80px;
+height: 120px;
 position: relative;
 }
 
@@ -25,4 +25,22 @@ position: relative;
     border: 0;
     background-color: #F5F5F5;
     padding: 0.5rem 1rem;
+}
+
+/* DELETE BADGE MODAL */
+
+.DeleteBadgeModal__container{
+text-align: center;
+}
+.DeleteBadgeModal__title{
+  font-size: 26px;
+  margin:8px;
+}
+
+.DeleteBadgeModal__buttons-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  
 }

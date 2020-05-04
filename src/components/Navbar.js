@@ -12,9 +12,12 @@ class Navbar extends React.Component {
             <div className="Navbar">
                 <Link to="/">
 
-                    <img src={logo} alt="logo" className="Navbar__logo" />
-                    <span className="font-weight-light"> Health</span>
-                    <span className="font-weight-bold">Conf</span>
+                    <img src={logo} alt="logo"
+                        className="Navbar__logo" />
+                    <span
+                        className="font-weight-light"> Health</span>
+                    <span
+                        className="font-weight-bold">Conf</span>
                 </Link>
             </div>
 

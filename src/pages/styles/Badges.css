@@ -26,3 +26,13 @@ align-items: center;
     position: relative;
     left: 265px;
 }
+
+@media screen and (max-width:767px){
+
+    .Badges__btn{
+        position: relative;
+        left: 140px;
+
+    }
+
+}
