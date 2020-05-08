@@ -2,7 +2,6 @@ import React from 'react';
 import BadgesList from '../components/BadgesList'
 import './styles/Badges.css'
 import { Link } from 'react-router-dom';
-import api from '../Api'
 import PageLoading from '../components/PageLoading'
 import PageError from '../components/PageError'
 
@@ -19,12 +18,7 @@ class Badges extends React.Component {
 
         this.fetchData();
 
-        //Polling
-        this.fetchInterval = setInterval(this.fetchData, 5000);
-    }
-    componentWillUnmount() {
 
-        clearInterval(this.fetchInterval)
     }
 
 
@@ -32,7 +26,9 @@ class Badges extends React.Component {
         this.setState({ loading: true, error: null })
 
         try {
-            const data = await api.badges.list();
+
+            const fetchData = await fetch('https://techloveapi.herokuapp.com/api/users');
+            const data = await fetchData.json();
 
             this.setState({ loading: false, data: data })
 

@@ -27,7 +27,7 @@ function BadgeDetails(props) {
                         <div className="BadgeDetails__items">
                             <h2 className="ml-4">Actions</h2>
                             <div>
-                                <Link to={`${props.badgeDetails.id}/edit/`} >
+                                <Link to={`${props.badgeDetails._id}/edit/`} >
                                     <button className="btn btn-success ml-4">Edit</button>
                                 </Link>
                                 <button

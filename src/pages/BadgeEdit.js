@@ -2,7 +2,6 @@ import React from 'react';
 import BadgeForm from '../components/BadgeForm'
 import Badge from '../components/Badge'
 import './styles/BadgeNew.css'
-import api from '../Api'
 import hashGravatar from '../components/hashGravatar'
 import PageLoading from '../components/PageLoading';
 
@@ -26,8 +25,8 @@ class BadgeEdit extends React.Component {
         this.setState({ loading: true, error: null })
 
         try {
-            const data = await api.badges.read(
-                this.props.match.params.badgeId)
+            const fetchData = await fetch(`https://techloveapi.herokuapp.com/api/users/${this.props.match.params.badgeId}`)
+            const data = await fetchData.json();
 
             this.setState({ loading: false, form: data })
 
@@ -67,11 +66,20 @@ class BadgeEdit extends React.Component {
 
     handleSubmit = async e => {
         e.preventDefault();
+        const userInfo = this.state.form;
+        console.log(userInfo);
 
         this.setState({ loading: true, error: null })
 
         try {
-            await api.badges.update(this.state.form.id, this.state.form)
+            await fetch(`https://techloveapi.herokuapp.com/api/users/${this.props.match.params.badgeId}`,
+
+                {
+                    headers: { "Content-Type": "application/json; charset=utf-8" },
+                    method: 'PATCH',
+                    body: JSON.stringify(userInfo)
+                }
+            )
             this.setState({ loading: false, error: null })
             this.props.history.push('/badges')
         } catch (error) {

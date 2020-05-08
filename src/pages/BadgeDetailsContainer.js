@@ -1,6 +1,5 @@
 import React from 'react';
-import api from '../Api';
-import BadgeDetails from './BadgeDetails'
+import BadgeDetails from './BadgeDetails';
 import PageLoading from '../components/PageLoading';
 
 class BadgeDetailsContainer extends React.Component {
@@ -21,8 +20,11 @@ class BadgeDetailsContainer extends React.Component {
         this.setState({ loading: true, error: null })
 
         try {
-            const data = await api.badges.read(
-                this.props.match.params.badgeId)
+
+            // api.badges.read(
+            //     this.props.match.params.badgeId)
+            const fetchData = await fetch(`https://techloveapi.herokuapp.com/api/users/${this.props.match.params.badgeId}`);
+            const data = await fetchData.json();
 
             this.setState({ loading: false, data: data })
 
@@ -43,7 +45,10 @@ class BadgeDetailsContainer extends React.Component {
         this.setState({ loading: true, error: null })
 
         try {
-            await api.badges.remove(this.props.match.params.badgeId)
+            // api.badges.remove(this.props.match.params.badgeId)
+            await fetch(`https://techloveapi.herokuapp.com/api/users/${this.props.match.params.badgeId}`, {
+                method: 'DELETE'
+            })
             this.setState({ loading: false, error: null })
             this.props.history.push('/badges')
         } catch (error) {

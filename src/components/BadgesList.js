@@ -61,9 +61,9 @@ function BadgesList(props) {
             <ul className="BadgesList__wrapper mb-6">
                 {
                     filteredBadges.map(badge =>
-                        <li key={badge.id} className="BadgeList__item">
+                        <li key={badge._id} className="BadgeList__item">
                             <Link className="text-reset text-decoration-none"
-                                to={`badges/${badge.id}`}>
+                                to={`badges/${badge._id}`}>
                                 <BadgesListItem badge={badge} />
                             </Link>
 

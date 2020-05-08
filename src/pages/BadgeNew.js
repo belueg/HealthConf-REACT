@@ -2,7 +2,6 @@ import React from 'react';
 import BadgeForm from '../components/BadgeForm'
 import Badge from '../components/Badge'
 import './styles/BadgeNew.css'
-import api from '../Api'
 import hashGravatar from '../components/hashGravatar'
 import PageLoading from '../components/PageLoading';
 
@@ -40,16 +39,24 @@ class BadgeNew extends React.Component {
 
   handleSubmit = async e => {
     e.preventDefault();
-
+    const user = this.state.form;
     this.setState({ loading: true, error: null })
 
     try {
-      await api.badges.create(this.state.form)
+      await fetch('https://techloveapi.herokuapp.com/api/users', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(user),
+      })
+
       this.setState({ loading: false, error: null })
       this.props.history.push('/badges')
     } catch (error) {
       this.setState({ loading: false, error: error })
     }
+
 
 
   }
